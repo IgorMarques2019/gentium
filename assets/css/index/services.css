@@ -1,0 +1,107 @@
+.txt-services::before,
+.works-area::after {
+  display: block;
+  background-color: var(--cl-01);
+  content: ""
+}
+
+#services .container {
+  max-width: 1340px;
+  background-color: #101010;
+  padding: 100px
+}
+
+.txt-services::before {
+  width: 45px;
+  height: 2px
+}
+
+.txt-services h2 {
+  font-size: 48px;
+  color: #fff
+}
+
+.txt-services>p {
+  color: var(--cl-02);
+  font-weight: 600;
+  letter-spacing: 2px
+}
+
+.works-area {
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 40px;
+  position: relative
+}
+
+.works-area::after {
+  width: 2px;
+  height: 40px;
+  margin: 50px auto;
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.works-area .work-item {
+  width: 353px;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  justify-content: space-between;
+  background-color: #262626;
+  padding: 20px
+}
+
+.works-area .work-item img {
+  max-width: 30px
+}
+
+.works-area .work-item h3 {
+  color: #fff
+}
+
+.work-item {
+  position: relative;
+  overflow: hidden
+}
+
+.work-item::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50px;
+  background-color: var(--cl-01);
+  position: absolute;
+  top: 0;
+  left: -55px;
+  transition: .8s
+}
+
+.work-item:hover::before {
+  left: calc(100% + 50px)
+}
+
+@media screen and (max-width:425px) {
+  #services .container {
+    padding: 50px
+  }
+
+  .txt-services h2 {
+    font-size: 38px;
+    color: #fff
+  }
+
+  .txt-services p {
+    font-size: 14px
+  }
+
+  .works-area {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px
+  }
+}
